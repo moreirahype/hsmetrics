@@ -152,6 +152,10 @@ svg {
   font-weight: 700;
 }
 
+.section .eyebrow {
+  margin-bottom: 18px;
+}
+
 h1,
 h2,
 h3,
@@ -178,12 +182,24 @@ h3 {
   line-height: 1.15;
 }
 
-.hero-copy p,
-.section p,
-.final-cta p {
+.hero-copy p {
   margin-top: 18px;
   color: var(--muted);
   font-size: 18px;
+}
+
+.section p,
+.final-cta p {
+  margin-top: 30px;
+  color: var(--muted);
+  font-size: 18px;
+}
+
+.section h2 + p,
+.section-heading p,
+.final-cta h2 + p {
+  margin-top: 0;
+  padding-top: 18px;
 }
 
 .hero-actions {
@@ -775,10 +791,6 @@ details {
   margin-bottom: 34px;
 }
 
-.section-heading p {
-  margin-top: 20px;
-}
-
 .attendant-section {
   width: min(1280px, calc(100% - 40px));
 }
@@ -1214,7 +1226,11 @@ details p {
   }
 
   .hero {
-    padding: 24px 0 42px;
+    padding: 42px 0 42px;
+  }
+
+  .hero .eyebrow {
+    margin-top: 18px;
   }
 
   .section {
