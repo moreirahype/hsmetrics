@@ -976,7 +976,7 @@ details {
 .pricing-grid {
   display: grid;
   grid-template-columns: repeat(3, minmax(0, 1fr));
-  gap: 18px;
+  gap: 22px;
   align-items: stretch;
 }
 
@@ -1342,6 +1342,7 @@ details p a {
   .shot-grid,
   .timing-section {
     grid-template-columns: 1fr;
+    gap: 26px;
   }
 
   .notification-copy {
