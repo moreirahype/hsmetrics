@@ -1792,5 +1792,103 @@ details p a {
   }
 }
 
+/* ===== Seção da dor (antes x depois) ===== */
+.pain-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 20px;
+  margin-top: 8px;
+}
+
+.pain-card {
+  position: relative;
+  overflow: hidden;
+  padding: 28px;
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  background: linear-gradient(145deg, #1a2819, #0e160f);
+  box-shadow: 0 18px 46px rgba(0, 0, 0, 0.24);
+}
+
+.pain-tag {
+  display: inline-block;
+  margin-bottom: 18px;
+  padding: 6px 14px;
+  border-radius: 999px;
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 0.02em;
+}
+
+.pain-before .pain-tag {
+  border: 1px solid rgba(255, 123, 114, 0.4);
+  background: rgba(255, 123, 114, 0.1);
+  color: #ff9c95;
+}
+
+.pain-after .pain-tag {
+  border: 1px solid var(--line-strong);
+  background: rgba(159, 232, 112, 0.1);
+  color: var(--accent);
+}
+
+.pain-card ul {
+  display: grid;
+  gap: 14px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.pain-card li {
+  position: relative;
+  padding-left: 34px;
+  color: var(--muted);
+  line-height: 1.45;
+}
+
+.pain-card li::before {
+  position: absolute;
+  left: 0;
+  top: -1px;
+  display: grid;
+  place-items: center;
+  width: 22px;
+  height: 22px;
+  border-radius: 50%;
+  font-size: 13px;
+  font-weight: 700;
+}
+
+.pain-before li::before {
+  content: "✕";
+  border: 1px solid rgba(255, 123, 114, 0.4);
+  background: rgba(255, 123, 114, 0.08);
+  color: #ff9c95;
+}
+
+.pain-after li::before {
+  content: "✓";
+  border: 1px solid var(--line-strong);
+  background: rgba(159, 232, 112, 0.12);
+  color: var(--accent);
+}
+
+.pain-after {
+  border-color: var(--line-strong);
+  box-shadow: 0 24px 58px rgba(0, 0, 0, 0.3), 0 0 34px rgba(159, 232, 112, 0.08);
+}
+
+@media (max-width: 760px) {
+  .pain-grid {
+    grid-template-columns: 1fr;
+    gap: 14px;
+  }
+
+  .pain-card {
+    padding: 22px;
+  }
+}
+
 
 
